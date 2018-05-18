@@ -1,0 +1,4 @@
+-- insert into project (id,project_name,description,skill_set) values (1,'name1','description','skillset');
+-- insert into project (id,project_name,description,skill_set) values (2,'name2','description2','skillset2');
+-- insert into project (id,project_name,description,skill_set) values (3,'name3','description','skillset');
+-- insert into project (id,project_name,description,skill_set) values (4,'name4','description2','skillset2');

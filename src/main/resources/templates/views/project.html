@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/main}">	
+<head>
+	<title>Blog Home Page</title>
+</head>
+<body>
+		
+	<div layout:fragment="content">
+	test projrect here
+	
+	    <article th:each="project : ${project}">
+			<header>
+				<h2 th:text="${project.name}">title</h2>
+				<p th:text="${#calendars.format(project.time,'M/yyyy')}">postedOn</p>
+			</header>
+			<section th:utext="${project.description}">
+				teaser
+			</section>
+			<section th:utext="${project.skills}">
+				teaser
+			</section>
+			<footer>
+		<!-- 		<a th:href="|@{/posts/view/}${post.slug}|">Read More</a>
+				<address>
+					Posted By <a th:href="|mailto:${post.author.email}|"> <span th:text="|${post.author.firstName} ${post.author.lastName}|">author</span></a>
+				</address> -->
+			</footer>
+			<hr/>
+		</article>  
+
+	<!-- 	<p th:if="${posts.size() == 0}">
+			<div class="alert alert-warning" role="alert">No Posts Found.</div>
+		</p> -->
+		
+	</div>
+		
+</body>
+</html>
